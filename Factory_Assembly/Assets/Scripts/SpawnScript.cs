@@ -29,7 +29,7 @@ public class SpawnScript : MonoBehaviour {
 
     void SpawnItem()
     {
-        spawnClone[0] = Instantiate(spawnPrefab[Random.Range(0, 3)], spawnPoint[0].transform.position, Quaternion.Euler(0, 0, 0));
+        spawnClone[0] = Instantiate(spawnPrefab[Random.Range(0, 0)], spawnPoint[0].transform.position, Quaternion.Euler(0, 0, 0));
     }
     void Timer()
     {

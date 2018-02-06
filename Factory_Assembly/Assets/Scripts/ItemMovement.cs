@@ -10,38 +10,32 @@ public class ItemMovement : MonoBehaviour {
     public float _beltForce;
 
     public bool isUp;
-    public bool isLeft;
 
     void Start()
     {
-        switch (isUp)
+       /* switch (isUp)
         {
             case false:
-                _beltForceY = _beltForce;
+                _beltForceY += _beltForce;
                 break;
-           /* case 2:
-                _beltForceY = -_beltForce;
-                break;
-            case 3:
-                _beltForceX = -_beltForce;
-                break;*/
             default:
-                _beltForceX = _beltForce;
+                _beltForceX += _beltForce;
                 break;
-        }
-
-       /* if (itemType == WorkBench.SpectrumPart.FinishedSpectrum)
-        {
-            Debug.Log("box has spawned!");
         }*/
+        if(isUp == true)
+        {
+            _beltForceY += _beltForce;
+        }
+        else
+            _beltForceX += _beltForce;
+
     }
 
-    void OnCollisionStay(Collision other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Belt")
         {
-            //_onBelt = true;
-            this.transform.position = new Vector3(this.transform.position.x + _beltForceX, this.transform.localPosition.y + _beltForceY, this.transform.position.z);
+            this.transform.position = new Vector2(this.transform.position.x + _beltForceX, this.transform.localPosition.y + _beltForceY);
         }
     }
     
