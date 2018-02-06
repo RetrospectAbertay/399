@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!61 &61988579961453846
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -87,7 +87,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.2
 --- !u!114 &114134319824621904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: 10
+  _beltForce: 2.69
+  parts: {fileID: 50132726547007836}
   isUp: 0
 --- !u!212 &212426368482114474
 SpriteRenderer:

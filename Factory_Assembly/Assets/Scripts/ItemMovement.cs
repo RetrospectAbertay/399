@@ -8,6 +8,7 @@ public class ItemMovement : MonoBehaviour {
     float _beltForceX;
     float _beltForceY;
     public float _beltForce;
+    public Rigidbody2D parts;
 
     public bool isUp;
 
@@ -35,8 +36,18 @@ public class ItemMovement : MonoBehaviour {
     {
         if (other.gameObject.tag == "Belt")
         {
+
             this.transform.position = new Vector2(this.transform.position.x + _beltForceX, this.transform.localPosition.y + _beltForceY);
         }
     }
-    
+
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+            parts.velocity = Vector3.zero;
+
+        }
+   }
 }

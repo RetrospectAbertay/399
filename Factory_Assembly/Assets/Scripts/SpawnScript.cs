@@ -10,6 +10,8 @@ public class SpawnScript : MonoBehaviour {
     public GameObject[] spawnClone;
     public float MaxTime;
     private float timer;
+    private bool stop;
+    public float wait;
 
     void Start()
     {
@@ -19,8 +21,16 @@ public class SpawnScript : MonoBehaviour {
     void Update()
     {
         timer -= (10 * Time.deltaTime);
+        if(Input.GetKeyDown("space"))
+        {
+            stop = true;
+        }
+        if (Input.GetKeyUp("space"))
+        {
+            stop = false;
+        }
 
-        if (timer <= 0)
+        if (timer <= 0 && stop == false)
         {
             SpawnItem();
             timer = MaxTime;
