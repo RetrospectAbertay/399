@@ -10,39 +10,37 @@ public class ItemMovement : MonoBehaviour {
     public float _beltForce;
     public Rigidbody2D parts;
 
-    public bool isUp;
+    public bool isDown;
 
     void Start()
     {
-       /* switch (isUp)
-        {
-            case false:
-                _beltForceY += _beltForce;
-                break;
-            default:
-                _beltForceX += _beltForce;
-                break;
-        }*/
-        if(isUp == true)
+        
+        if (isDown == true)
         {
             _beltForceY += _beltForce;
+            _beltForceX = 0;
         }
         else
+        {
             _beltForceX += _beltForce;
+            _beltForceY = 0;
+        }
 
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    /*void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.tag == "Belt")
         {
-
-            this.transform.position = new Vector2(this.transform.position.x + _beltForceX, this.transform.localPosition.y + _beltForceY);
+            Debug.Log("Contact");
+            parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
         }
-    }
+    }*/
 
     void Update()
     {
+        //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
+        parts.velocity = new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
         if (Input.GetKeyDown("space"))
         {
             print("space key was pressed");
