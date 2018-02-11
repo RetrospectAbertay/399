@@ -28,15 +28,6 @@ public class ItemMovement : MonoBehaviour {
 
     }
 
-    /*void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Belt")
-        {
-            Debug.Log("Contact");
-            parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
-        }
-    }*/
-
     void Update()
     {
         //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);

@@ -12,6 +12,7 @@ public class SpawnScript : MonoBehaviour {
     private float timer;
     private bool stop;
     public float wait;
+    public bool partSpawner;
 
     void Start()
     {
@@ -20,20 +21,23 @@ public class SpawnScript : MonoBehaviour {
 
     void Update()
     {
-        timer -= (10 * Time.deltaTime);
-        if(Input.GetKeyDown("space"))
+        if (partSpawner == true)
         {
-            stop = true;
-        }
-        if (Input.GetKeyUp("space"))
-        {
-            stop = false;
-        }
+            timer -= (10 * Time.deltaTime);
+            if (Input.GetKeyDown("space"))
+            {
+                stop = true;
+            }
+            if (Input.GetKeyUp("space"))
+            {
+                stop = false;
+            }
 
-        if (timer <= 0 && stop == false)
-        {
-            SpawnItem();
-            timer = MaxTime;
+            if (timer <= 0 && stop == false)
+            {
+                SpawnItem();
+                timer = MaxTime;
+            }
         }
     }
 
