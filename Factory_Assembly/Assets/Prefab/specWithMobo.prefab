@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212546264070300836}
   - component: {fileID: 61293191060273644}
   - component: {fileID: 50236509429627466}
-  - component: {fileID: 114904415909879646}
   - component: {fileID: 114777403152381202}
+  - component: {fileID: 114655120964391150}
   m_Layer: 0
   m_Name: specWithMobo
   m_TagString: Untagged
@@ -89,6 +89,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 0
+--- !u!114 &114655120964391150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1227672072279564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6f1182de15c8d4682bec9fa83dcf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _beltForce: 0
+  parts: {fileID: 50236509429627466}
 --- !u!114 &114777403152381202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,20 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePoint: 1
   scoreValue: 1
---- !u!114 &114904415909879646
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1227672072279564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _beltForce: 40
-  parts: {fileID: 50236509429627466}
-  isDown: 0
 --- !u!212 &212546264070300836
 SpriteRenderer:
   m_ObjectHideFlags: 1

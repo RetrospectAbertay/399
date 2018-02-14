@@ -25,8 +25,8 @@ public class DeleteScript : MonoBehaviour {
         }*/
         if(other.gameObject.tag == "stop")
         {
-            Debug.Log("Triggered!");
-            Destroy(this.gameObject, 1);
+            //Debug.Log("Triggered!");
+            Destroy(this.gameObject, 0);
             if(scorePoint == true)
             {
                 Score.score += scoreValue;

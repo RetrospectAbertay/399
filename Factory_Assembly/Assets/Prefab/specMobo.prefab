@@ -23,7 +23,8 @@ GameObject:
   - component: {fileID: 61366228547780562}
   - component: {fileID: 50235370327342806}
   - component: {fileID: 114353628098351938}
-  - component: {fileID: 114050374930643884}
+  - component: {fileID: 114623644188553208}
+  - component: {fileID: 114276772654179314}
   m_Layer: 0
   m_Name: specMobo
   m_TagString: Untagged
@@ -89,7 +90,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 0
---- !u!114 &114050374930643884
+--- !u!114 &114276772654179314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,11 +98,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799550638217960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3b1492d5e5a4644821b83642752177, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d272dcef78743f4697baba0a293d639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scorePoint: 0
   scoreValue: 0
+  spawnPrefab: {fileID: 1227672072279564, guid: 3911bd19fec56d74aa297eeca7b6b28a,
+    type: 2}
+  spawnClone: {fileID: 1227672072279564, guid: 3911bd19fec56d74aa297eeca7b6b28a, type: 2}
 --- !u!114 &114353628098351938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +120,19 @@ MonoBehaviour:
   _beltForce: -40
   parts: {fileID: 50235370327342806}
   isDown: 1
+--- !u!114 &114623644188553208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799550638217960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3b1492d5e5a4644821b83642752177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePoint: 1
+  scoreValue: 1
 --- !u!212 &212835812967519412
 SpriteRenderer:
   m_ObjectHideFlags: 1
