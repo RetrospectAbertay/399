@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212546264070300836}
   - component: {fileID: 61293191060273644}
   - component: {fileID: 50236509429627466}
-  - component: {fileID: 114777403152381202}
   - component: {fileID: 114655120964391150}
   m_Layer: 0
   m_Name: specWithMobo
@@ -100,21 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6f1182de15c8d4682bec9fa83dcf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: 0
+  _beltForce: 40
   parts: {fileID: 50236509429627466}
---- !u!114 &114777403152381202
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1227672072279564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3b1492d5e5a4644821b83642752177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scorePoint: 1
-  scoreValue: 1
 --- !u!212 &212546264070300836
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -13,10 +13,12 @@ public class SpawnScript : MonoBehaviour {
     private bool stop;
     public float wait;
     public bool partSpawner;
+	state currentstate;
 
     void Start()
     {
         timer = MaxTime;
+		currentstate = state.go;
     }
 
     void Update()
@@ -43,7 +45,13 @@ public class SpawnScript : MonoBehaviour {
 
     void SpawnItem()
     {
-        spawnClone[0] = Instantiate(spawnPrefab[Random.Range(0, 0)], spawnPoint[0].transform.position, Quaternion.Euler(0, 0, 0));
+		//if (currentstate == state.go) {
+		//	Debug.Log ("go");
+			spawnClone [0] = Instantiate (spawnPrefab [Random.Range (0, 0)], spawnPoint [0].transform.position, Quaternion.Euler (0, 0, 0));
+		//} 
+
+
+        
     }
     void Timer()
     {

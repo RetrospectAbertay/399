@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum state{pause,go};
+
 public class PlacePart : MonoBehaviour {
     public bool scorePoint;
     public int scoreValue;
-  
-    public GameObject spawnPrefab;
-    public GameObject spawnClone;
-    // Use this for initialization
+    public Transform[] spawnPoint;
+    public GameObject[] spawnPrefab;
+    public GameObject[] spawnClone;
+
+	state currentState;
+
+	// Use this for initialization
     void Start () {
-		
+		currentState = state.go;
 	}
 	
 	// Update is called once per frame
@@ -24,19 +29,21 @@ public class PlacePart : MonoBehaviour {
             Debug.Log("Triggered!");
             DestroyImmediate(partGo[i].gameObject, true);
         }*/
-        if (other.gameObject.tag == "Place" && Input.GetKeyDown("space"))
+        if (other.gameObject.tag == "bottom" && Input.GetKeyDown("space"))
         {
            // Debug.Log("Space");
             Destroy(this.gameObject, 0);
+			Destroy (other.gameObject, 0);
             SpawnItem();
+			currentState = state.pause;
             if (scorePoint == true)
             {
                 Score.score += scoreValue;
             }
         }
     }
-    void SpawnItem()
-    {
-        spawnClone = Instantiate(spawnPrefab, new Vector3(3/2,-(1/2),-1), Quaternion.Euler(0, 0, 0));
-    }
+	void SpawnItem()
+	{
+		spawnClone[0] = Instantiate(spawnPrefab[0], spawnPoint[0].transform.position, Quaternion.Euler(0, 0, 0));
+	}
 }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class DeleteScript : MonoBehaviour {
     public bool scorePoint;
     public int scoreValue;
-    //public GameObject[] partGo;
-
+ 
 	// Use this for initialization
 	void Start () {
 		
@@ -26,11 +25,13 @@ public class DeleteScript : MonoBehaviour {
         if(other.gameObject.tag == "stop")
         {
             //Debug.Log("Triggered!");
-            Destroy(this.gameObject, 0);
+            Destroy(this.gameObject, 5);
             if(scorePoint == true)
             {
                 Score.score += scoreValue;
             }
         }
+       
     }
+
 }

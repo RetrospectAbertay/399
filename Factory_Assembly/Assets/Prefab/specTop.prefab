@@ -113,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: 40
+  _beltForce: -40
   parts: {fileID: 50425406930527950}
-  isDown: 0
+  isDown: 1
 --- !u!212 &212998506216877004
 SpriteRenderer:
   m_ObjectHideFlags: 1

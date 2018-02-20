@@ -114,11 +114,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d272dcef78743f4697baba0a293d639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePoint: 1
+  scorePoint: 0
   scoreValue: 0
-  spawnPrefab: {fileID: 1227672072279564, guid: 3911bd19fec56d74aa297eeca7b6b28a,
-    type: 2}
-  spawnClone: {fileID: 1227672072279564, guid: 3911bd19fec56d74aa297eeca7b6b28a, type: 2}
+  spawnPoint:
+  - {fileID: 0}
+  spawnPrefab:
+  - {fileID: 0}
+  spawnClone: []
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1

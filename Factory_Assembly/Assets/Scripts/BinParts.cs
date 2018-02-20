@@ -9,7 +9,7 @@ public class BinParts : MonoBehaviour {
     {
             if (other.gameObject.tag == "Bin")
             {
-                Debug.Log("Contact");
+                //Debug.Log("Contact");
                // GameObject.Destroy(parts);
             }
         }

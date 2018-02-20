@@ -19,9 +19,7 @@ public class MoveNext : MonoBehaviour {
         if(Input.GetKeyDown("a"))
         {
             Debug.Log("a is pressed");
-            _beltForce = 40;
-            _beltForceX += _beltForce;
-            parts.velocity = new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
+			parts.velocity = new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
         }
         
     }

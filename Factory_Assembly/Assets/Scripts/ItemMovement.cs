@@ -9,7 +9,7 @@ public class ItemMovement : MonoBehaviour {
     float _beltForceY;
     public float _beltForce;
     public Rigidbody2D parts;
-
+	state currentState;
     public bool isDown;
 
     void Start()
@@ -19,33 +19,34 @@ public class ItemMovement : MonoBehaviour {
         {
             _beltForceY += _beltForce;
             _beltForceX = 0;
+			//currentState = state.go;
         }
         else
         {
             _beltForceX += _beltForce;
             _beltForceY = 0;
+			//currentState = state.go;
         }
 
     }
 
-    /*void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Belt")
-        {
-            Debug.Log("Contact");
-            parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
-        }
-    }*/
+  
+
 
     void Update()
     {
         //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
         parts.velocity = new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
-        if (Input.GetKeyDown("space"))
-        {
-            print("space key was pressed");
-            parts.velocity = Vector2.zero;
+     //   if (Input.GetKeyDown("space"))
+      //  {
+	//		Debug.Log ("Inside to stop velocity");
+	//		parts.velocity = Vector2.zero;
+		//	_beltForceX = 0;
+	//		_beltForce = 0;
+	//		_beltForceY += _beltForce;
+		//	_beltForceY = 0;
+		//	_beltForceX += _beltForce;
 
-        }
+      //  }
    }
 }

@@ -19,7 +19,7 @@ public class ItemStop : MonoBehaviour {
     {
         if (other.rigidbody == part)
         {
-            Debug.Log("Contact");
+           // Debug.Log("Contact");
             part.velocity = Vector2.zero;
         }
     }
