@@ -7,12 +7,12 @@ public class MoveNext : MonoBehaviour {
     float _beltForceY;
     public float _beltForce;
     public Rigidbody2D parts;
-	bool pressed = false;
+	//bool pressed = false;
 
     // Use this for initialization
     void Start () {
        
-		parts.velocity = Vector2.zero;
+
 		_beltForceX += _beltForce;
 		_beltForceY = 0;
     }
@@ -22,7 +22,7 @@ public class MoveNext : MonoBehaviour {
 	{
 		if (Input.GetKeyDown ("z")) 
 		{
-			pressed = true;
+			//pressed = true;
 			Debug.Log ("z is pressed");
 			parts.velocity = new Vector2 (parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
 			Debug.Log (parts.velocity);

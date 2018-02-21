@@ -12,7 +12,8 @@ public class ItemStop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+
 	}
 
     void OnCollisionStay2D(Collision2D other)
@@ -23,4 +24,6 @@ public class ItemStop : MonoBehaviour {
             part.velocity = Vector2.zero;
         }
     }
+
+
 }

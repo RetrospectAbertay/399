@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -496,32 +496,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4394694021541188, guid: 89426c5c90da2ec49bb9229ca8d92719,
     type: 2}
   m_PrefabInternal: {fileID: 793886294}
---- !u!21 &274259651
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/CRTShader
-  m_Shader: {fileID: 4800000, guid: 7558febc48edab044a1e9c248b886514, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - hardPix: -3
-    - hardScan: -8
-    - maskDark: 0.5
-    - maskLight: 1.5
-    - resScale: 4
-    m_Colors:
-    - warp: {r: 0.03125, g: 0.04166, b: 0, a: 0}
 --- !u!4 &288361918 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4394694021541188, guid: 89426c5c90da2ec49bb9229ca8d92719,
@@ -631,6 +605,32 @@ Transform:
   m_Father: {fileID: 473072462}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &409121092
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/CRTShader
+  m_Shader: {fileID: 4800000, guid: 7558febc48edab044a1e9c248b886514, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - hardPix: -3
+    - hardScan: -8
+    - maskDark: 0.5
+    - maskLight: 1.5
+    - resScale: 4
+    m_Colors:
+    - warp: {r: 0.03125, g: 0.04166, b: 0, a: 0}
 --- !u!1 &423516750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05190b3bd0768bf4d9fe4c5aee937550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 274259651}
+  material: {fileID: 409121092}
 --- !u!1 &906490249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50132726547007836, guid: 6b9581825526246448b3e205f21e55ee, type: 2}
---- !u!21 &1376078737
+--- !u!21 &1348105231
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05190b3bd0768bf4d9fe4c5aee937550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 1376078737}
+  material: {fileID: 1348105231}
 --- !u!1 &2071357735
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,7 +3829,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2099586499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.11, z: -0.059}
+  m_LocalPosition: {x: -0.04, y: -0.11, z: -0.217}
   m_LocalScale: {x: 1.2139022, y: 0.708092, z: 1}
   m_Children: []
   m_Father: {fileID: 52093234}
@@ -3866,7 +3866,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.054742217, y: 0.5259838}
+  m_Offset: {x: -0.054742217, y: 0.36944175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3877,7 +3877,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59668064, y: 2.8813896}
+  m_Size: {x: 0.59668064, y: 0.95061255}
   m_EdgeRadius: 0
 --- !u!114 &2099586503
 MonoBehaviour:

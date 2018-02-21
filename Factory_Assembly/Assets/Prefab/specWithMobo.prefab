@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61293191060273644}
   - component: {fileID: 50236509429627466}
   - component: {fileID: 114655120964391150}
-  - component: {fileID: 114614384040676696}
   m_Layer: 0
   m_Name: specWithMobo
   m_TagString: Untagged
@@ -89,20 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 0
---- !u!114 &114614384040676696
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1227672072279564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _beltForce: 40
-  parts: {fileID: 50236509429627466}
-  isDown: 0
 --- !u!114 &114655120964391150
 MonoBehaviour:
   m_ObjectHideFlags: 1

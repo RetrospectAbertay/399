@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Timer : MonoBehaviour
             
             if (end)
         {
-            return;
+			SceneManager.LoadScene(0);
         }
                
 
