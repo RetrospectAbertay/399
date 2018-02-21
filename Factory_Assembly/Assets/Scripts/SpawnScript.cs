@@ -13,12 +13,12 @@ public class SpawnScript : MonoBehaviour {
     private bool stop;
     public float wait;
     public bool partSpawner;
-	state currentstate;
+	//state currentstate;
 
     void Start()
     {
         timer = MaxTime;
-		currentstate = state.go;
+//		currentstate = state.go;
     }
 
     void Update()

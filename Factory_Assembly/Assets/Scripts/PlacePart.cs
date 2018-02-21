@@ -1,8 +1,8 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum state{pause,go};
+//public enum state{pause,go};
 
 public class PlacePart : MonoBehaviour {
     public bool scorePoint;
@@ -11,17 +11,17 @@ public class PlacePart : MonoBehaviour {
     public GameObject[] spawnPrefab;
     public GameObject[] spawnClone;
 
-	state currentState;
 
 	// Use this for initialization
     void Start () {
-		currentState = state.go;
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
     private void OnTriggerStay2D(Collider2D other)
     {
         /*for (int i = 0; i < partGo.Length; i++)
@@ -29,13 +29,13 @@ public class PlacePart : MonoBehaviour {
             Debug.Log("Triggered!");
             DestroyImmediate(partGo[i].gameObject, true);
         }*/
-        if (other.gameObject.tag == "bottom" && Input.GetKeyDown("space"))
+        if (other.gameObject.tag == "bottom" && Input.GetKeyDown("a"))
         {
-           // Debug.Log("Space");
+            Debug.Log("a");
             Destroy(this.gameObject, 0);
 			Destroy (other.gameObject, 0);
             SpawnItem();
-			currentState = state.pause;
+			//currentState = state.pause;
             if (scorePoint == true)
             {
                 Score.score += scoreValue;

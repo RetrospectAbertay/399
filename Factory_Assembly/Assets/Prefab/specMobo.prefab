@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 61366228547780562}
   - component: {fileID: 50235370327342806}
   - component: {fileID: 114353628098351938}
-  - component: {fileID: 114082214470254398}
   m_Layer: 0
   m_Name: specMobo
   m_TagString: Untagged
@@ -89,25 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 6.99
---- !u!114 &114082214470254398
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1799550638217960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d272dcef78743f4697baba0a293d639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scorePoint: 0
-  scoreValue: 0
-  spawnPoint:
-  - {fileID: 0}
-  spawnPrefab:
-  - {fileID: 0}
-  spawnClone:
-  - {fileID: 0}
 --- !u!114 &114353628098351938
 MonoBehaviour:
   m_ObjectHideFlags: 1
