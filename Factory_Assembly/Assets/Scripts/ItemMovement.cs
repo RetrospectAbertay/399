@@ -5,28 +5,29 @@ using UnityEngine;
 public class ItemMovement : MonoBehaviour {
 
     // conveyer belt variables
-    float _beltForceX;
-    float _beltForceY;
+   // float _beltForceX;
+   // float _beltForceY;
     public float _beltForce;
     public Rigidbody2D parts;
 	//state currentState;
-    public bool isDown;
+   // public bool isDown;
 
     void Start()
     {
-        
-        if (isDown == true)
-        {
-            _beltForceY += _beltForce;
-            _beltForceX = 0;
-			//currentState = state.go;
-        }
-        else
-        {
-            _beltForceX += _beltForce;
-            _beltForceY = 0;
-			//currentState = state.go;
-        }
+        parts = GetComponent<Rigidbody2D>();
+        parts.constraints = RigidbodyConstraints2D.FreezePositionY;
+        //     if (isDown == true)
+        //     {
+        //         _beltForceY += _beltForce;
+        //         _beltForceX = 0;
+        ////currentState = state.go;
+        //     }
+        //     else
+        //     {
+        //         _beltForceX += _beltForce;
+        //         _beltForceY = 0;
+        ////currentState = state.go;
+        //     }
 
     }
 
@@ -36,7 +37,9 @@ public class ItemMovement : MonoBehaviour {
     void Update()
     {
         //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
-        parts.velocity = new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
+        //parts.velocity = new Vector2(parts.position.x + _beltForce, 0) * Time.fixedDeltaTime;
+        parts.velocity = new Vector2(parts.velocity.x +_beltForce, 0) * Time.fixedDeltaTime;
+       
        // if (Input.GetKeyDown("space"))
        // {
 		//	Debug.Log ("Inside to stop velocity");

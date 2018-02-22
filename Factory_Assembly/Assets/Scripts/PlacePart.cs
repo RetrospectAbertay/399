@@ -7,10 +7,7 @@ using UnityEngine;
 public class PlacePart : MonoBehaviour {
     public bool scorePoint;
     public int scoreValue;
-    public Transform[] spawnPoint;
-    public GameObject[] spawnPrefab;
-    public GameObject[] spawnClone;
-
+    public Rigidbody2D[] part;
 
 	// Use this for initialization
     void Start () {
@@ -22,28 +19,30 @@ public class PlacePart : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        
         /*for (int i = 0; i < partGo.Length; i++)
         {
             Debug.Log("Triggered!");
             DestroyImmediate(partGo[i].gameObject, true);
         }*/
-        if (other.gameObject.tag == "bottom" && Input.GetKeyDown("a"))
+        if (other.gameObject.tag == "Parts")
         {
-            Debug.Log("a");
-            Destroy(this.gameObject, 0);
-			Destroy (other.gameObject, 0);
-            SpawnItem();
-			//currentState = state.pause;
-            if (scorePoint == true)
+            Debug.Log("j");
+            if (Input.GetKeyDown("a"))
             {
-                Score.score += scoreValue;
+                Debug.Log("a");
+                // Destroy(this.gameObject, 0);
+                //Destroy (other.gameObject, 0);
+                part[0].velocity = new Vector2(part[0].position.x, part[0].position.y + 40) * Time.fixedDeltaTime;
+
+                if (scorePoint == true)
+                {
+                    Score.score += scoreValue;
+                }
             }
         }
     }
-	void SpawnItem()
-	{
-		spawnClone[0] = Instantiate(spawnPrefab[0], spawnPoint[0].transform.position, Quaternion.Euler(0, 0, 0));
-	}
+	
 }

@@ -24,7 +24,8 @@ public class Timer : MonoBehaviour
             
             if (end)
         {
-			SceneManager.LoadScene(0);
+			//SceneManager.LoadScene(0);
+			return;
         }
                
 

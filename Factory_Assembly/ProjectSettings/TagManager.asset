@@ -7,6 +7,10 @@ TagManager:
   - Belt
   - stop
   - Win
+  - Place
+  - bottom
+  - Keyboard
+  - Parts
   layers:
   - Default
   - TransparentFX
@@ -16,11 +20,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Belts
+  - Parts
+  - Items
+  - Foreground
   - 
   - 
   - 
@@ -43,4 +47,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 390256785
+    locked: 0
+  - name: Belts
+    uniqueID: 2893150921
+    locked: 0
+  - name: Parts
+    uniqueID: 436199885
+    locked: 0
+  - name: Items
+    uniqueID: 4154492881
+    locked: 0
+  - name: Foreground
+    uniqueID: 2205183373
     locked: 0

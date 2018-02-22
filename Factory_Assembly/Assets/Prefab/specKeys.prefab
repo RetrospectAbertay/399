@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50369630856076578}
   - component: {fileID: 114371574453210390}
   - component: {fileID: 114249071930343334}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: specKeys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: -40
   parts: {fileID: 50369630856076578}
-  isDown: 1
 --- !u!212 &212754613792599174
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -145,8 +144,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -140474415
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 609e3b0559b08dc49aef97ae465c3f9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

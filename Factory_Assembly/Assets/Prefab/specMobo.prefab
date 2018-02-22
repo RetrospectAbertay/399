@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 61366228547780562}
   - component: {fileID: 50235370327342806}
   - component: {fileID: 114353628098351938}
-  - component: {fileID: 114291585373846462}
-  m_Layer: 0
+  - component: {fileID: 114422283450531720}
+  m_Layer: 11
   m_Name: specMobo
-  m_TagString: Untagged
+  m_TagString: Parts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &61366228547780562
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -89,19 +89,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 6.99
---- !u!114 &114291585373846462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1799550638217960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4b4e648a87e62e4980fda0d01632a3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  part: {fileID: 50235370327342806}
-  _beltForce: 40
 --- !u!114 &114353628098351938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,9 +100,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: -40
+  _beltForce: 40
   parts: {fileID: 50235370327342806}
-  isDown: 1
+--- !u!114 &114422283450531720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799550638217960}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d272dcef78743f4697baba0a293d639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePoint: 0
+  scoreValue: 0
+  part: []
 --- !u!212 &212835812967519412
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -145,8 +145,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -140474415
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 02c960a7f9c18d844a690526d365bd09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
