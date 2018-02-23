@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 61366228547780562}
   - component: {fileID: 50235370327342806}
   - component: {fileID: 114353628098351938}
-  - component: {fileID: 114422283450531720}
+  - component: {fileID: 114991745846672280}
   m_Layer: 11
   m_Name: specMobo
-  m_TagString: Parts
+  m_TagString: Win
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: 40
   parts: {fileID: 50235370327342806}
---- !u!114 &114422283450531720
+--- !u!114 &114991745846672280
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePoint: 0
   scoreValue: 0
-  part: []
+  part: {fileID: 0}
 --- !u!212 &212835812967519412
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,6 +125,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -140,6 +141,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
