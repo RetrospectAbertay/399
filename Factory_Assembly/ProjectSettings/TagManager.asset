@@ -11,6 +11,8 @@ TagManager:
   - bottom
   - Keyboard
   - Parts
+  - ItemsScreen1
+  - MoveToScreen2
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - Parts
   - Items
   - Foreground
-  - 
-  - 
+  - ItemScreen1
+  - MoveScreen2
   - 
   - 
   - 

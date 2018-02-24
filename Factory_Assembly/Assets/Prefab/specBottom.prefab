@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 61546675312186972}
   - component: {fileID: 50955510300833562}
   - component: {fileID: 114296864002655928}
-  - component: {fileID: 114278101359835724}
-  m_Layer: 11
+  - component: {fileID: 114906134314449082}
+  - component: {fileID: 114557615709574272}
+  m_Layer: 13
   m_Name: specBottom
   m_TagString: bottom
   m_Icon: {fileID: 0}
@@ -63,7 +64,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!61 &61546675312186972
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -89,20 +90,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 1.3784719}
   m_EdgeRadius: 0
---- !u!114 &114278101359835724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1662925706249702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d272dcef78743f4697baba0a293d639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scorePoint: 0
-  scoreValue: 0
-  part: {fileID: 50955510300833562}
 --- !u!114 &114296864002655928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +103,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: 40
   parts: {fileID: 50955510300833562}
+--- !u!114 &114557615709574272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662925706249702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f36c0274be675c40b91b41483567fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 50955510300833562}
+--- !u!114 &114906134314449082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662925706249702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9b9cb0a2b8dbc418d1c22901dd43c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 50955510300833562}
+  _beltForce: 40
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -38,7 +38,7 @@ public class ItemMovement : MonoBehaviour {
     {
         //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
         //parts.velocity = new Vector2(parts.position.x + _beltForce, 0) * Time.fixedDeltaTime;
-		parts.velocity = new Vector2(parts.velocity.x +_beltForce, parts.velocity.y -_beltForce) * Time.fixedDeltaTime;
+		parts.velocity = new Vector2(parts.velocity.x +_beltForce, parts.velocity.x -200) * Time.fixedDeltaTime;
        
        // if (Input.GetKeyDown("space"))
        // {
