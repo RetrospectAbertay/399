@@ -7,7 +7,7 @@ public class MoveNext : MonoBehaviour
     float _beltForceX;
     float _beltForceY;
     public float _beltForce;
-    public Rigidbody2D parts;
+    public Rigidbody2D parts; 
     public string inputKey;
     //bool pressed = false;
 
