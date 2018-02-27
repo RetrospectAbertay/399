@@ -7,27 +7,30 @@ public class MoveNext : MonoBehaviour {
     float _beltForceY;
     public float _beltForce;
     public Rigidbody2D parts;
+    Rigidbody2D clone;
+    public string inputKey;
 	//bool pressed = false;
 
     // Use this for initialization
-    void Start () {
-       
+    void Start ()
+    {
 
-		_beltForceX += _beltForce;
-		_beltForceY = 0;
+        _beltForceX = 0;
     }
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown ("z")) 
+        parts.velocity = new Vector2(this.transform.position.x + _beltForceX, this.transform.position.y) * Time.fixedDeltaTime;
+
+        if (Input.GetKeyDown (inputKey)) 
 		{
 			//pressed = true;
-			Debug.Log ("z is pressed");
-			parts.velocity = new Vector2 (parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime;
-			Debug.Log (parts.velocity);
-
-		}
-	}
+			Debug.Log (inputKey +" is pressed");
+            _beltForceX += _beltForce;
+            Debug.Log (parts.velocity);
+        }
+        
+    }
 
 }

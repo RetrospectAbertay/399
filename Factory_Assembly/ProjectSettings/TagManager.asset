@@ -13,6 +13,8 @@ TagManager:
   - Parts
   - ItemsScreen1
   - MoveToScreen2
+  - Mobo
+  - Top
   layers:
   - Default
   - TransparentFX
@@ -23,12 +25,12 @@ TagManager:
   - 
   - 
   - Background
-  - Belts
+  - Environment
   - Parts
   - Items
-  - Foreground
-  - ItemScreen1
-  - MoveScreen2
+  - StopPoints
+  - 
+  - 
   - 
   - 
   - 
@@ -53,8 +55,11 @@ TagManager:
   - name: Background
     uniqueID: 390256785
     locked: 0
-  - name: Belts
+  - name: Environment
     uniqueID: 2893150921
+    locked: 0
+  - name: StopPoints
+    uniqueID: 2205183373
     locked: 0
   - name: Parts
     uniqueID: 436199885
@@ -63,5 +68,5 @@ TagManager:
     uniqueID: 4154492881
     locked: 0
   - name: Foreground
-    uniqueID: 2205183373
+    uniqueID: 1657233783
     locked: 0
