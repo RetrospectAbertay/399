@@ -57,8 +57,12 @@ public class Timer : MonoBehaviour
             if (t == 0)
             {
                 end = true;
-                SceneManager.LoadScene("StartMenu");
             }
+        }
+        if(t <= 0)
+        {
+            Debug.Log("Scene Change");
+            SceneManager.LoadScene("StartMenu");
         }
     }
 }
