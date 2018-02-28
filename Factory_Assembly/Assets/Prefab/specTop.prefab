@@ -26,9 +26,10 @@ GameObject:
   - component: {fileID: 114259525813832502}
   - component: {fileID: 114265068239435482}
   - component: {fileID: 114375870962389056}
+  - component: {fileID: 114491959984940868}
   m_Layer: 10
   m_Name: specTop
-  m_TagString: bottom
+  m_TagString: Top
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813446319738954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9b9cb0a2b8dbc418d1c22901dd43c5, type: 3}
   m_Name: 
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813446319738954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f36c0274be675c40b91b41483567fad, type: 3}
   m_Name: 
@@ -130,13 +131,27 @@ MonoBehaviour:
   part1: {fileID: 21300000, guid: 12900387f4a2fa245a57eeb3cb776be0, type: 3}
   part2: {fileID: 21300000, guid: eee9ca5959ccd5245a0afd6bd950b064, type: 3}
   tagName: Keyboard
---- !u!114 &114829451236288524
+--- !u!114 &114491959984940868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813446319738954}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6f1182de15c8d4682bec9fa83dcf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _beltForce: 40
+  parts: {fileID: 50955510300833562, guid: e429cd5981a9fdb4e8e9381203dd5dd7, type: 2}
+  inputKey: z
+--- !u!114 &114829451236288524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813446319738954}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 

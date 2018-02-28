@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114557615709574272}
   - component: {fileID: 114519327855415534}
   - component: {fileID: 114968005439096534}
+  - component: {fileID: 114666845704335540}
   m_Layer: 10
   m_Name: specBottom
   m_TagString: bottom
@@ -131,7 +132,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
-  inputKey: 
+--- !u!114 &114666845704335540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662925706249702}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83669840b5929eb488657c143f98c478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114906134314449082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -158,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: 40
   parts: {fileID: 50955510300833562}
-  inputKey: s
+  inputKey: z
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1

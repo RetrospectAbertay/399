@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114868105880905118}
   - component: {fileID: 114345052341321504}
   - component: {fileID: 114175728270308540}
+  - component: {fileID: 114898289699026150}
   m_Layer: 10
   m_Name: specKeys
   m_TagString: Keyboard
@@ -111,7 +112,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001451700875390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f36c0274be675c40b91b41483567fad, type: 3}
   m_Name: 
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001451700875390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
@@ -136,13 +137,27 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001451700875390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9b9cb0a2b8dbc418d1c22901dd43c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50035005132524466}
   _beltForce: 40
+--- !u!114 &114898289699026150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001451700875390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6f1182de15c8d4682bec9fa83dcf8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _beltForce: 40
+  parts: {fileID: 50955510300833562, guid: e429cd5981a9fdb4e8e9381203dd5dd7, type: 2}
+  inputKey: z
 --- !u!212 &212455801773013860
 SpriteRenderer:
   m_ObjectHideFlags: 1
