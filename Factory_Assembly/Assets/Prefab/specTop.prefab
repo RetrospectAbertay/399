@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50534962062541500}
+  inputKey: 
   _beltForce: 40
 --- !u!114 &114265068239435482
 MonoBehaviour:
@@ -116,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50534962062541500}
+  inputKey: 
 --- !u!114 &114375870962389056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b0e7add1675444fb78e697bccfc1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part1: {fileID: 21300000, guid: 12900387f4a2fa245a57eeb3cb776be0, type: 3}
-  part2: {fileID: 21300000, guid: eee9ca5959ccd5245a0afd6bd950b064, type: 3}
+  firstSprite: {fileID: 21300000, guid: 12900387f4a2fa245a57eeb3cb776be0, type: 3}
+  secondSprite: {fileID: 21300000, guid: eee9ca5959ccd5245a0afd6bd950b064, type: 3}
   tagName: Keyboard
 --- !u!114 &114829451236288524
 MonoBehaviour:

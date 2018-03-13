@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpriteChange : MonoBehaviour
 {
-    public Sprite part1;
-    public Sprite part2;
+    public Sprite firstSprite;
+    public Sprite secondSprite;
     public string tagName;
 
     private SpriteRenderer spriteRenderer;
@@ -15,7 +15,7 @@ public class SpriteChange : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
-            spriteRenderer.sprite = part1;
+            spriteRenderer.sprite = firstSprite;
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -29,14 +29,14 @@ public class SpriteChange : MonoBehaviour
 
     void changeSprite()
     {
-        if (spriteRenderer.sprite == part1) // if the spriteRenderer sprite = sprite1 then change to sprite2
+        if (spriteRenderer.sprite == firstSprite) // if the spriteRenderer sprite = sprite1 then change to sprite2
         {
             Debug.Log("Change");
-            spriteRenderer.sprite = part2;
+            spriteRenderer.sprite = secondSprite;
         }
         else
         {
-            spriteRenderer.sprite = part1; // otherwise change it back to sprite1
+            spriteRenderer.sprite = firstSprite; // otherwise change it back to sprite1
         }
     }
 }

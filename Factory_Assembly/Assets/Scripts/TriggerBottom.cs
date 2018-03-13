@@ -7,7 +7,8 @@ public class TriggerBottom : MonoBehaviour {
 	public Rigidbody2D part;
 	private bool frozen;
 
-	public float _beltForce;
+    public string inputKey;
+    public float _beltForce;
 	// Use this for initialization
 	void Start () {
 
@@ -28,17 +29,16 @@ public class TriggerBottom : MonoBehaviour {
 
 			Debug.Log ("two");
 			if (frozen == false) {
-				part.constraints = RigidbodyConstraints2D.FreezePosition;
+				part.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
 
 				//part.constraints = RigidbodyConstraints2D.FreezeRotation;
 				frozen = true;
 			}
 			//part.constraints = RigidbodyConstraints2D.None;
-			if (Input.GetKeyDown ("z")) 
+			if (Input.GetKeyDown (inputKey)) 
 			{
-				part.constraints = RigidbodyConstraints2D.None;
-				part.constraints = RigidbodyConstraints2D.FreezeRotation;
-				part.constraints = RigidbodyConstraints2D.FreezePositionY;
+				
+				part.constraints = RigidbodyConstraints2D.FreezePositionY| RigidbodyConstraints2D.FreezeRotation;
 				part.velocity = new Vector2(part.velocity.x +_beltForce, part.velocity.y -_beltForce) * Time.fixedDeltaTime;
 			}
 		}

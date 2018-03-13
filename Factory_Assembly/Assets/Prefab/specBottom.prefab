@@ -66,7 +66,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &61546675312186972
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b0e7add1675444fb78e697bccfc1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part1: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
-  part2: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
+  firstSprite: {fileID: 21300000, guid: a5c56b317ea794647857868bc0b30d11, type: 3}
+  secondSprite: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
   tagName: Mobo
 --- !u!114 &114557615709574272
 MonoBehaviour:
@@ -125,13 +125,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662925706249702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f36c0274be675c40b91b41483567fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
-  inputKey: 
+  inputKey: d
 --- !u!114 &114906134314449082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
+  inputKey: z
   _beltForce: 40
 --- !u!114 &114968005439096534
 MonoBehaviour:
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: 40
   parts: {fileID: 50955510300833562}
-  inputKey: s
+  inputKey: z
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1

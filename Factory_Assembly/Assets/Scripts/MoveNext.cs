@@ -27,7 +27,7 @@ public class MoveNext : MonoBehaviour
         {
             //pressed = true;
             Debug.Log(inputKey + " is pressed");
-            _beltForceX += _beltForce;
+            _beltForceX = _beltForce;
             Debug.Log(parts.velocity);
         }
 
