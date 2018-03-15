@@ -7,7 +7,7 @@ public class SpriteChange : MonoBehaviour
     public Sprite firstSprite;
     public Sprite secondSprite;
     public string tagName;
-
+    bool canMove;
     private SpriteRenderer spriteRenderer;
 
     // Use this for initialization
@@ -16,6 +16,8 @@ public class SpriteChange : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = firstSprite;
+
+        canMove = false;
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -33,10 +35,16 @@ public class SpriteChange : MonoBehaviour
         {
             Debug.Log("Change");
             spriteRenderer.sprite = secondSprite;
+            canMove = true;
         }
         else
         {
             spriteRenderer.sprite = firstSprite; // otherwise change it back to sprite1
         }
+    }
+
+    public bool getBool()
+    {
+        return canMove;
     }
 }
