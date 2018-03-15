@@ -32,7 +32,7 @@ public class MoveNext : MonoBehaviour
         canMove = this.GetComponent<SpriteChange>().getBool();
         if(canMove == true)
         {
-            Debug.Log("Can Move");
+          //  Debug.Log("Can Move");
         }
 
         if (Input.GetKeyDown(inputKey) && canMove == true)

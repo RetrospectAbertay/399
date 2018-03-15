@@ -28,7 +28,7 @@ public class TriggerBottom : MonoBehaviour {
         canMove = this.GetComponent<SpriteChange>().getBool();
         if (canMove == true)
         {
-            Debug.Log("Can Move 2");
+           // Debug.Log("Can Move 2");
         }
     }
 
@@ -36,7 +36,7 @@ public class TriggerBottom : MonoBehaviour {
 	{
 		if (coll.gameObject.CompareTag ("stop")) {
 
-			Debug.Log ("two");
+			//Debug.Log ("two");
 			if (frozen == false) {
 				part.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
 

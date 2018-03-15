@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114025231912041862}
   - component: {fileID: 114542246581910156}
   - component: {fileID: 114286548416276292}
+  - component: {fileID: 114443834860772912}
   m_Layer: 10
   m_Name: specMobo
   m_TagString: Mobo
@@ -116,6 +117,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   part: {fileID: 50840633637809512}
   inputKey: a
+--- !u!114 &114443834860772912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999367056466458}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd6547ab5c1c7d4f9140e7f6860adf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextObj: {fileID: 0}
 --- !u!114 &114542246581910156
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,6 +15,7 @@ TagManager:
   - MoveToScreen2
   - Mobo
   - Top
+  - Trigger
   layers:
   - Default
   - TransparentFX
