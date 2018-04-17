@@ -6,21 +6,31 @@ public class TriggerBottom : MonoBehaviour {
 
 	public Rigidbody2D part;
 	private bool frozen;
+    bool canMove;
 
-	public float _beltForce;
+    public string inputKey;
+    public float _beltForce;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 
 		part = GetComponent<Rigidbody2D>();
 		frozen = false;
-
-		///part.constraints = RigidbodyConstraints2D.FreezeRotation;
+        canMove = false;
+        //this.GetComponent<SpriteChange>();
+        
+		//part.constraints = RigidbodyConstraints2D.FreezeRotation;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update ()
+    {
+        canMove = this.GetComponent<SpriteChange>().getBool();
+        if (canMove == true)
+        {
+            Debug.Log("Can Move 2");
+        }
+    }
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
@@ -28,19 +38,18 @@ public class TriggerBottom : MonoBehaviour {
 
 			Debug.Log ("two");
 			if (frozen == false) {
-				part.constraints = RigidbodyConstraints2D.FreezePosition|RigidbodyConstraints2D.FreezeRotation;
+				part.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
 
 				//part.constraints = RigidbodyConstraints2D.FreezeRotation;
 				frozen = true;
 			}
-			//part.constraints = RigidbodyConstraints2D.None;
-			if (Input.GetKeyDown ("z")) 
-			{
-				part.constraints = RigidbodyConstraints2D.None|RigidbodyConstraints2D.FreezePositionY;
-				//part.constraints = RigidbodyConstraints2D.FreezeRotation|RigidbodyConstraints2D.FreezePositionY;
-				//part.constraints = RigidbodyConstraints2D.FreezePositionY;
-				part.velocity = new Vector2(part.velocity.x +_beltForce, part.velocity.y -_beltForce) * Time.fixedDeltaTime;
-			}
+            //part.constraints = RigidbodyConstraints2D.None;
+            if (Input.GetKeyDown(inputKey) && canMove == true)
+            {
+                part.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                //part.velocity = new Vector2(part.velocity.x +_beltForce, part.velocity.y -_beltForce) * Time.fixedDeltaTime;
+                //part.transform.Translate(new Vector3(_beltForce, -_beltForce*8, 0) * Time.fixedDeltaTime);
+            }
 		}
 	}
 }

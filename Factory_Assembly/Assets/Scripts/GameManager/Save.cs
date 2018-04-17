@@ -27,7 +27,7 @@ public class Save : MonoBehaviour {
     public void loadHighScore()
     {
         SaveHighScore();
-        //PlayerPrefs.GetInt("Highscore");
+        PlayerPrefs.GetInt("Highscore");
     }
 
 

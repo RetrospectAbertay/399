@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class SpriteChange : MonoBehaviour
 {
-    public Sprite part1;
-    public Sprite part2;
+    public Sprite firstSprite;
+    public Sprite secondSprite;
     public string tagName;
-    bool changedSprite;
-
+    bool canMove;
     private SpriteRenderer spriteRenderer;
 
     // Use this for initialization
     void Start()
     {
-        changedSprite = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
-            spriteRenderer.sprite = part1;
+            spriteRenderer.sprite = firstSprite;
+
+        canMove = false;
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -25,25 +25,43 @@ public class SpriteChange : MonoBehaviour
         if(other.gameObject.tag == tagName)
         {
             changeSprite();
-            changedSprite = true;
             Destroy(other.gameObject);
         }
     }
 
     void changeSprite()
     {
-        if (spriteRenderer.sprite == part1) // if the spriteRenderer sprite = sprite1 then change to sprite2
+        // if the spriteRenderer sprite = sprite1 then change to sprite2
+        if (spriteRenderer.sprite == firstSprite) 
         {
-            Debug.Log(changedSprite);
-            spriteRenderer.sprite = part2;
+            Debug.Log("Change");
+            spriteRenderer.sprite = secondSprite;
+            StartCoroutine(Flashing());
+            spriteRenderer.sprite = secondSprite;
+            canMove = true;
         }
         else
         {
-            spriteRenderer.sprite = part1; // otherwise change it back to sprite1
+            // otherwise change it back to sprite1
+            spriteRenderer.sprite = firstSprite; 
+            canMove = false;
         }
     }
+
+    IEnumerator Flashing()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+           // spriteRenderer.material.color = Color.black;
+            yield return new WaitForSeconds(0.001f);
+            //spriteRenderer.material.color = Color.white;
+            yield return new WaitForSeconds(0.001f);
+
+        }
+    }
+
     public bool getBool()
     {
-        return changedSprite;
+        return canMove;
     }
 }

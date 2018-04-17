@@ -6,12 +6,13 @@ public class TriggerTop : MonoBehaviour {
 
 	public Rigidbody2D part;
 	bool down ;
-	// Use this for initialization
-	void Start () {
+    public string inputKey;
+    // Use this for initialization
+    void Start () {
 		down = false;
 		part = GetComponent<Rigidbody2D>();
 
-		part.constraints = RigidbodyConstraints2D.FreezePositionY;
+		part.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
 		//part.constraints = RigidbodyConstraints2D.FreezeRotation;
 	}
 	
@@ -29,9 +30,9 @@ public class TriggerTop : MonoBehaviour {
         }*/
 		if (down == false)
 		{
-			if (coll.gameObject.CompareTag ("Finish") && Input.GetKeyDown ("space")) {
+			if (coll.gameObject.CompareTag ("Finish") && Input.GetKeyDown(inputKey)) {
 				Debug.Log ("one");
-				part.constraints = RigidbodyConstraints2D.FreezePositionX;
+				part.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
 
 				//part.constraints = RigidbodyConstraints2D.FreezeRotation;
 				down = true;

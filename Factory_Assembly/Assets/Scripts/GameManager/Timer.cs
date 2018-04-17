@@ -8,7 +8,8 @@ public class Timer : MonoBehaviour
 {
 
     public Text timerText;
-    private float startTime;
+    private  float startTime;
+    float t;
     private bool end = false;
     public bool correct;
     public bool incorrect;
@@ -16,6 +17,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         startTime = 60.0f;//Time.time;
+        t = startTime;
     }
 
     // Update is called once per frame
@@ -24,16 +26,14 @@ public class Timer : MonoBehaviour
 
         if (end)
         {
-            //SceneManager.LoadScene(0);
+            SceneManager.LoadScene("StartMenu");
             return;
         }
 
-
-        float t = startTime - Time.time;
-
+         t -= Time.deltaTime;
+        
         string seconds = (t % 60).ToString("f0");
-
-
+        
         timerText.text = "Time :" + seconds;
 
         //Add five seconds to time if specrtum completed correctly
@@ -43,25 +43,28 @@ public class Timer : MonoBehaviour
             t += 5.0f;
         }
 
-        //Take ten seconds off the time if spectrum completed incorrectly
+        //Take seconds off the time if spectrum completed incorrectly
 
         if (incorrect)
         {
-            t += 5.0f;
+            t -= 2.0f;
         }
 
         if (t <= 10)
         {
 
             timerText.color = Color.red;
-            if (t == 0)
+            if (t <= 0)
             {
-                end = true;
+               // t = startTime;
+               // Debug.Log("Scene Change" + t);
+                //end = true;
             }
         }
         if(t <= 0)
         {
-            Debug.Log("Scene Change");
+            t = startTime;
+            Debug.Log("Scene Change" + t);
             SceneManager.LoadScene("StartMenu");
         }
     }

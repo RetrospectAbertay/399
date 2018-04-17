@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 114557615709574272}
   - component: {fileID: 114519327855415534}
   - component: {fileID: 114968005439096534}
-  - component: {fileID: 114666845704335540}
   m_Layer: 10
   m_Name: specBottom
   m_TagString: bottom
@@ -42,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662925706249702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: -1.2837827, y: -1.735, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +79,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.01596737}
+  m_Offset: {x: 0, y: 0.124979794}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -91,7 +90,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 1.3784719}
+  m_Size: {x: 2.56, y: 1.5964967}
   m_EdgeRadius: 0
 --- !u!114 &114296864002655928
 MonoBehaviour:
@@ -117,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b0e7add1675444fb78e697bccfc1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part1: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
-  part2: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
+  firstSprite: {fileID: 21300000, guid: a5c56b317ea794647857868bc0b30d11, type: 3}
+  secondSprite: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
   tagName: Mobo
 --- !u!114 &114557615709574272
 MonoBehaviour:
@@ -126,35 +125,26 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662925706249702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f36c0274be675c40b91b41483567fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
---- !u!114 &114666845704335540
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1662925706249702}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83669840b5929eb488657c143f98c478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  inputKey: d
 --- !u!114 &114906134314449082
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662925706249702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c9b9cb0a2b8dbc418d1c22901dd43c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
+  inputKey: z
   _beltForce: 40
 --- !u!114 &114968005439096534
 MonoBehaviour:

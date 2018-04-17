@@ -36,20 +36,20 @@ public class ItemMovement : MonoBehaviour {
 
     void Update()
     {
-        //parts.MovePosition(new Vector2(parts.position.x + _beltForceX, parts.position.y + _beltForceY) * Time.fixedDeltaTime);
-        //parts.velocity = new Vector2(parts.position.x + _beltForce, 0) * Time.fixedDeltaTime;
-		parts.velocity = new Vector2(parts.velocity.x +_beltForce, parts.velocity.x -200) * Time.fixedDeltaTime;
-       
-       // if (Input.GetKeyDown("space"))
-       // {
-		//	Debug.Log ("Inside to stop velocity");
-		//	parts.velocity = Vector2.zero;
-			//_beltForceX = 0;
-		//	_beltForce = 0;
-		//	_beltForceY += _beltForce;
-		//	_beltForceY = 0;
-		//	_beltForceX += _beltForce;
+        parts.velocity = new Vector2(_beltForce,  -_beltForce*8) * Time.fixedDeltaTime;
+        //parts.velocity = new Vector2(parts.velocity.x + _beltForce, 0) * Time.fixedDeltaTime;
+        //parts.transform.Translate(new Vector3(_beltForce, 0, 0) * Time.fixedDeltaTime);
+
+        // if (Input.GetKeyDown("space"))
+        // {
+        //	Debug.Log ("Inside to stop velocity");
+        //	parts.velocity = Vector2.zero;
+        //_beltForceX = 0;
+        //	_beltForce = 0;
+        //	_beltForceY += _beltForce;
+        //	_beltForceY = 0;
+        //	_beltForceX += _beltForce;
 
         //}
-   }
+    }
 }
