@@ -6,12 +6,14 @@ using UnityEngine;
 
 public class PlacePart : MonoBehaviour {
     public bool scorePoint;
+	public Animator anim;
+
     //public Rigidbody2D part;
 
 	// Use this for initialization
     void Start () {
 		//part = GetComponent<Rigidbody2D>();
-			
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +22,7 @@ public class PlacePart : MonoBehaviour {
 	}
     private void OnCollisionEnter2D(Collision2D other)
     {
+		anim.SetTrigger ("boxopen");
         if(scorePoint== true)
         {
             Score.score++;
