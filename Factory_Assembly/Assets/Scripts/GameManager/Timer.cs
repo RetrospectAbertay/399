@@ -13,21 +13,26 @@ public class Timer : MonoBehaviour
     private bool end = false;
     public bool correct;
     public bool incorrect;
+	public AudioSource audio;
     // Use this for initialization
     void Start()
     {
-        startTime = 60.0f;//Time.time;
+        startTime = 90.0f;//Time.time;
         t = startTime;
+		audio.Play ();
     }
 
     // Update is called once per frame
-    void Update()
+	void Update()
     {
 
         if (end)
         {
-            SceneManager.LoadScene("StartMenu");
-            return;
+			
+			SceneManager.LoadScene("StartMenu");
+			return;
+			
+           
         }
 
          t -= Time.deltaTime;
@@ -62,10 +67,16 @@ public class Timer : MonoBehaviour
             }
         }
         if(t <= 0)
-        {
+		{
+			audio.Play ();
             t = startTime;
+
             Debug.Log("Scene Change" + t);
             SceneManager.LoadScene("StartMenu");
         }
-    }
+ 
+	}
+
+
+
 }
