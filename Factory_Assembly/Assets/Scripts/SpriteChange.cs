@@ -10,12 +10,17 @@ public class SpriteChange : MonoBehaviour
     bool canMove;
     private SpriteRenderer spriteRenderer;
 
+    DisableTriggers disableTriggers;
+    GameObject triggerGameObject;
+    public string triggerName;
+
     // Use this for initialization
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = firstSprite;
+        triggerGameObject = GameObject.Find(triggerName);
 
         canMove = false;
     }
@@ -31,6 +36,8 @@ public class SpriteChange : MonoBehaviour
 
     void changeSprite()
     {
+        disableTriggers = triggerGameObject.GetComponent<DisableTriggers>();
+
         // if the spriteRenderer sprite = sprite1 then change to sprite2
         if (spriteRenderer.sprite == firstSprite) 
         {
@@ -39,23 +46,27 @@ public class SpriteChange : MonoBehaviour
             StartCoroutine(Flashing());
             spriteRenderer.sprite = secondSprite;
             canMove = true;
+            disableTriggers.deactivateCollider();
+            
         }
-        else
-        {
-            // otherwise change it back to sprite1
-            spriteRenderer.sprite = firstSprite; 
-            canMove = false;
-        }
+        //else
+        //{
+        //    // otherwise change it back to sprite1
+        //    spriteRenderer.sprite = firstSprite; 
+        //    canMove = false;
+        //}
     }
 
     IEnumerator Flashing()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 4; i++)
         {
-           // spriteRenderer.material.color = Color.black;
-            yield return new WaitForSeconds(0.001f);
-            //spriteRenderer.material.color = Color.white;
-            yield return new WaitForSeconds(0.001f);
+            spriteRenderer.material.color = Color.black;
+            //spriteRenderer.color = new Color(spriteRenderer.color.r + 40, spriteRenderer.color.g + 40, spriteRenderer.color.b + 40, 1);
+            yield return new WaitForSeconds(0.01f);
+            //spriteRenderer.color = new Color(spriteRenderer.color.r - 40, spriteRenderer.color.g - 40, spriteRenderer.color.b - 40, 1);
+            spriteRenderer.material.color = Color.white;
+            yield return new WaitForSeconds(0.01f);
 
         }
     }

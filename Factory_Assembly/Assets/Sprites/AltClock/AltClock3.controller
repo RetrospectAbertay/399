@@ -28,7 +28,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: NewClock
-  m_Speed: 0.018
+  m_Speed: 0.005
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

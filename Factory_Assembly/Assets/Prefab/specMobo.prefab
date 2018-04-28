@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: 40
+  _beltForce: 50
   parts: {fileID: 50840633637809512}
 --- !u!114 &114286548416276292
 MonoBehaviour:
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   part: {fileID: 50840633637809512}
   inputKey: z
-  _beltForce: 40
+  _beltForce: 50
 --- !u!212 &212911429223763798
 SpriteRenderer:
   m_ObjectHideFlags: 1

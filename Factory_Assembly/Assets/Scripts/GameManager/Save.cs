@@ -13,22 +13,25 @@ public class Save : MonoBehaviour {
             //totalScore += Score.score;
             totalScoreText = GetComponent<Text>();
         }
-	
-	// Update is called once per frame
-	void Update () {
-        totalScoreText.text = "Spectrum Built: " + Score.score;
-    }
-
-    public void SaveHighScore()
-    {
-        //PlayerPrefs.SetInt("Highscore", totalScore+Score.score);
-    }
 
     public void loadHighScore()
     {
         SaveHighScore();
         PlayerPrefs.GetInt("Highscore");
     }
+
+    // Update is called once per frame
+    void Update () {
+        totalScoreText.text = "Total Spectrums Assembled: " + Score.score;
+        totalScoreText.text = "Total Spectrums Assembled: " + 0;
+    }
+
+    public void SaveHighScore()
+    {
+        Debug.Log(totalScore + " total score, " + Score.score + " game score");
+        PlayerPrefs.SetInt("Highscore", totalScore+Score.score);
+    }
+
 
 
 }

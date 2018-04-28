@@ -13,47 +13,49 @@ public class Timer : MonoBehaviour
     private bool end = false;
     public bool correct;
     public bool incorrect;
-	public AudioSource audio;
+    Score score;
+    GameObject scoreGameObject;
+    //public GameObject scoreSreen1;
+    //public GameObject scoreSreen2;
+    //public GameObject scoreSreen3;
+    //public Text screen1;
+    //public Text screen2;
+    //public Text screen3;
+
+
+    GameManagerScript gameManagerScript;
+    public GameObject gameManager;
+
     // Use this for initialization
     void Start()
     {
-        startTime = 90.0f;//Time.time;
+        scoreGameObject = GameObject.Find("Score");
+        score = scoreGameObject.GetComponent<Score>();
+        Time.timeScale = 1;
+        startTime = 120.0f;//Time.time;
         t = startTime;
-		audio.Play ();
+        //scoreSreen1.SetActive(false);
+        //scoreSreen2.SetActive(false);
+        //scoreSreen3.SetActive(false);
     }
 
     // Update is called once per frame
-	void Update()
+    void Update()
     {
 
         if (end)
         {
-			
-			SceneManager.LoadScene("StartMenu");
-			return;
-			
-           
+            gameManagerScript = gameManager.GetComponent<GameManagerScript>();
+            gameManagerScript.SaveHighScore();
+            SceneManager.LoadScene("StartMenu");
+            return;
         }
 
          t -= Time.deltaTime;
         
-        string seconds = (t % 60).ToString("f0");
+        string seconds = (t % 120).ToString("f0");
         
         timerText.text = "Time :" + seconds;
-
-        //Add five seconds to time if specrtum completed correctly
-
-        if (correct)
-        {
-            t += 5.0f;
-        }
-
-        //Take seconds off the time if spectrum completed incorrectly
-
-        if (incorrect)
-        {
-            t -= 2.0f;
-        }
 
         if (t <= 10)
         {
@@ -61,22 +63,47 @@ public class Timer : MonoBehaviour
             timerText.color = Color.red;
             if (t <= 0)
             {
-               // t = startTime;
-               // Debug.Log("Scene Change" + t);
+                // t = startTime;
+                // 
                 //end = true;
+                 score.scoreDisplay();
+
+                //Time.timeScale = 1f;
+                
+                if ( t <= -1 )
+                {
+                    Debug.Log("Scene Change" + t);
+                    SceneManager.LoadScene("StartMenu");
+                }
             }
         }
         if(t <= 0)
-		{
-			audio.Play ();
-            t = startTime;
-
-            Debug.Log("Scene Change" + t);
-            SceneManager.LoadScene("StartMenu");
+        {
+           // t = startTime;
+           // SceneManager.LoadScene("StartMenu");
+            //StartCoroutine(scoreDisplay());
+           // Debug.Log("Scene Change" + t);
+            
         }
- 
-	}
+    }
 
+    public float GetTime()
+    {
+        return t;
+    }
 
-
+    //IEnumerator scoreDisplay()
+    //{
+    //    Score score;
+    //    int scorestring = score.getScore();
+    //    screen1.text = scorestring.ToString("f0");
+    //    screen2.text = scorestring.ToString("f0");
+    //    screen3.text = scorestring.ToString("f0");
+    //    Debug.Log( screen1.text);
+    //    scoreSreen1.SetActive(true);
+    //    scoreSreen2.SetActive(true);
+    //    scoreSreen3.SetActive(true);
+    //     yield return new WaitForSecondsRealtime(5);
+    //    
+    //}
 }

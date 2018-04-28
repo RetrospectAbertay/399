@@ -22,10 +22,10 @@ public class DeleteScript : MonoBehaviour {
             Debug.Log("Triggered!");
             DestroyImmediate(partGo[i].gameObject, true);
         }*/
-        if(other.gameObject.tag == "stop")
+        if(other.gameObject.tag == "Deleter")
         {
             //Debug.Log("Triggered!");
-            Destroy(this.gameObject, 5);
+            Destroy(this.gameObject);
             if(scorePoint == true)
             {
                 Score.score += scoreValue;

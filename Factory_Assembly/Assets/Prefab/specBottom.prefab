@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114557615709574272}
   - component: {fileID: 114519327855415534}
   - component: {fileID: 114968005439096534}
+  - component: {fileID: 114874363335054824}
   m_Layer: 10
   m_Name: specBottom
   m_TagString: bottom
@@ -41,8 +42,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1662925706249702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2837827, y: -1.735, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: -1.2837827, y: -1.54, z: 0}
+  m_LocalScale: {x: 0.40000004, y: 0.40000004, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -66,7 +67,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &61546675312186972
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663e0c93daa052a4cb93e6c0cd5ae71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beltForce: 40
+  _beltForce: 60
   parts: {fileID: 50955510300833562}
 --- !u!114 &114519327855415534
 MonoBehaviour:
@@ -119,6 +120,7 @@ MonoBehaviour:
   firstSprite: {fileID: 21300000, guid: a5c56b317ea794647857868bc0b30d11, type: 3}
   secondSprite: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
   tagName: Mobo
+  triggerName: Stop1
 --- !u!114 &114557615709574272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +134,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
   inputKey: d
+--- !u!114 &114874363335054824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662925706249702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3b1492d5e5a4644821b83642752177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePoint: 0
+  scoreValue: 0
 --- !u!114 &114906134314449082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   part: {fileID: 50955510300833562}
   inputKey: z
-  _beltForce: 40
+  _beltForce: 60
 --- !u!114 &114968005439096534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,6 +175,7 @@ MonoBehaviour:
   _beltForce: 40
   parts: {fileID: 50955510300833562}
   inputKey: z
+  triggerName: Stop1
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1
