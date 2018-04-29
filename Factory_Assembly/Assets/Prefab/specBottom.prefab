@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114519327855415534}
   - component: {fileID: 114968005439096534}
   - component: {fileID: 114874363335054824}
+  - component: {fileID: 114998875136756748}
   m_Layer: 10
   m_Name: specBottom
   m_TagString: bottom
@@ -121,6 +122,7 @@ MonoBehaviour:
   secondSprite: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
   tagName: Mobo
   triggerName: Stop1
+  particleName: Particle System
 --- !u!114 &114557615709574272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +178,18 @@ MonoBehaviour:
   parts: {fileID: 50955510300833562}
   inputKey: z
   triggerName: Stop1
+--- !u!114 &114998875136756748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662925706249702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2173efca7994044a5458e995f81f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 1662925706249702}
 --- !u!212 &212940297519673446
 SpriteRenderer:
   m_ObjectHideFlags: 1

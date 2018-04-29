@@ -49,12 +49,6 @@ public class SpriteChange : MonoBehaviour
             disableTriggers.deactivateCollider();
             
         }
-        //else
-        //{
-        //    // otherwise change it back to sprite1
-        //    spriteRenderer.sprite = firstSprite; 
-        //    canMove = false;
-        //}
     }
 
     IEnumerator Flashing()
@@ -62,9 +56,7 @@ public class SpriteChange : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             spriteRenderer.material.color = Color.black;
-            //spriteRenderer.color = new Color(spriteRenderer.color.r + 40, spriteRenderer.color.g + 40, spriteRenderer.color.b + 40, 1);
             yield return new WaitForSeconds(0.01f);
-            //spriteRenderer.color = new Color(spriteRenderer.color.r - 40, spriteRenderer.color.g - 40, spriteRenderer.color.b - 40, 1);
             spriteRenderer.material.color = Color.white;
             yield return new WaitForSeconds(0.01f);
 

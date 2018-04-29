@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114175728270308540}
   - component: {fileID: 114737154470319694}
   - component: {fileID: 114842177618616604}
+  - component: {fileID: 114587758485818148}
   m_Layer: 10
   m_Name: specKeys
   m_TagString: Keyboard
@@ -108,6 +109,7 @@ MonoBehaviour:
   secondSprite: {fileID: 21300000, guid: 80f82190f0eed174c9a27f6a166d3302, type: 3}
   tagName: bottom
   triggerName: Stop1 (1)
+  particleName: Particle System (1)
 --- !u!114 &114345052341321504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +136,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _beltForce: 60
   parts: {fileID: 50035005132524466}
+--- !u!114 &114587758485818148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1001451700875390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2173efca7994044a5458e995f81f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 1001451700875390}
 --- !u!114 &114737154470319694
 MonoBehaviour:
   m_ObjectHideFlags: 1
