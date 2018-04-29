@@ -8,8 +8,13 @@ public class DontDestroyAudio : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        DontDestroyOnLoad(ambient);
-        ambient.Play();
+		GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
+		if (objs.Length > 1) 
+		{
+			Destroy(this.gameObject);
+		}
+		DontDestroyOnLoad(ambient);
+
 
     }
 	

@@ -17,6 +17,7 @@ TagManager:
   - Top
   - Trigger
   - Deleter
+  - Music
   layers:
   - Default
   - TransparentFX

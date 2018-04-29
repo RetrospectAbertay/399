@@ -6,8 +6,10 @@ public class ItemMovement : MonoBehaviour
 {
 
     public float _beltForce;
+	public float _gradientForce;
+	public Rigidbody2D gradientObject;
     public Rigidbody2D parts;
-
+	public bool gradientMove = false;
     Timer time;
     GameObject timeGameObject;
 
@@ -18,26 +20,20 @@ public class ItemMovement : MonoBehaviour
         parts = GetComponent<Rigidbody2D>();
         parts.constraints = RigidbodyConstraints2D.FreezePositionY;
 
-       if (time.GetTime() > 60)
-        {
-            _beltForce = 40;
-        }
-        else if (time.GetTime() <= 60 && time.GetTime() > 30)
-       {
-            _beltForce = _beltForce + 30;
-        }
-        else if (time.GetTime() <= 30 && time.GetTime() > 20)
-        {
-            _beltForce = _beltForce + 50;
-        }
-        else if (time.GetTime() <= 20 && time.GetTime() > 10)
-        {
-            _beltForce = _beltForce + 80;
-        }
-        else if (time.GetTime() <= 10)
-        {
-            _beltForce = _beltForce + 120;
-        }
+		if (time.GetTime () > 60) {
+			_beltForce = 40;
+		} else if (time.GetTime () <= 60 && time.GetTime () > 30) {
+			_beltForce = _beltForce + 30;
+		} else if (time.GetTime () <= 30 && time.GetTime () > 20) {
+			_beltForce = _beltForce + 50;
+		} else if (time.GetTime () <= 20 && time.GetTime () > 10) {
+			_beltForce = _beltForce + 80;
+		} else if (time.GetTime () <= 10) {
+			_beltForce = _beltForce + 120;
+		} else if (time.GetTime() <= 0) 
+		{
+			_beltForce = 0;
+		}
 
     }
 
@@ -45,6 +41,6 @@ public class ItemMovement : MonoBehaviour
     {
 
         parts.velocity = new Vector2(_beltForce, -_beltForce * 8) * Time.fixedDeltaTime;
-
+		//gradient
     }
 }

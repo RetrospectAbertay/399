@@ -15,12 +15,15 @@ public class Timer : MonoBehaviour
     public bool incorrect;
     Score score;
     GameObject scoreGameObject;
+	public Rigidbody2D gradientObject;
+	public bool gradientMove = false;
+	public float _GradientForce = 60.0f;
     //public GameObject scoreSreen1;
     //public GameObject scoreSreen2;
     //public GameObject scoreSreen3;
-    //public Text screen1;
-    //public Text screen2;
-    //public Text screen3;
+    public Text screen1;
+    public Text screen2;
+    public Text screen3;
 
 
     GameManagerScript gameManagerScript;
@@ -32,11 +35,9 @@ public class Timer : MonoBehaviour
         scoreGameObject = GameObject.Find("Score");
         score = scoreGameObject.GetComponent<Score>();
         Time.timeScale = 1;
-        startTime = 120.0f;//Time.time;
+        startTime = 10.0f;//Time.time;
         t = startTime;
-        //scoreSreen1.SetActive(false);
-        //scoreSreen2.SetActive(false);
-        //scoreSreen3.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -45,9 +46,7 @@ public class Timer : MonoBehaviour
 
         if (end)
         {
-            gameManagerScript = gameManager.GetComponent<GameManagerScript>();
-            gameManagerScript.SaveHighScore();
-            SceneManager.LoadScene("StartMenu");
+            
             return;
         }
 
@@ -67,13 +66,24 @@ public class Timer : MonoBehaviour
                 // 
                 //end = true;
                  score.scoreDisplay();
-
+				gameManagerScript = gameManager.GetComponent<GameManagerScript>();
+				gameManagerScript.SaveHighScore();
                 //Time.timeScale = 1f;
                 
                 if ( t <= -1 )
-                {
-                    Debug.Log("Scene Change" + t);
-                    SceneManager.LoadScene("StartMenu");
+				{ 
+					gradientMove = true;
+					Debug.Log("Gradient Position" + gradientObject.position.x);
+					SceneManager.UnloadScene (1);
+					if (gradientMove == true) 
+					{
+
+						gradientObject.velocity = new Vector2(-_GradientForce* 8,  0.0f) * Time.fixedDeltaTime;
+						screen1.text = "" ;
+						screen2.text = "" ;
+						screen3.text = "" ;
+					}
+												
                 }
             }
         }
