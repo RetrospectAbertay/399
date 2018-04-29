@@ -108,7 +108,7 @@ MonoBehaviour:
   secondSprite: {fileID: 21300000, guid: eee9ca5959ccd5245a0afd6bd950b064, type: 3}
   tagName: Keyboard
   triggerName: Stop1 (2)
-  particleName: Particle System (2)
+  partName: Particle System (2)
 --- !u!114 &114259525813832502
 MonoBehaviour:
   m_ObjectHideFlags: 1

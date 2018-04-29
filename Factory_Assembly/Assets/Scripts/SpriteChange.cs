@@ -14,13 +14,20 @@ public class SpriteChange : MonoBehaviour
     GameObject triggerGameObject;
     public string triggerName;
 
+    Particles partSystem;
+    GameObject partGameObject;
+    public string partName;
+
     // Use this for initialization
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = firstSprite;
+
         triggerGameObject = GameObject.Find(triggerName);
+        partGameObject = GameObject.Find(partName);
+        partSystem = partGameObject.GetComponent<Particles>();
 
         canMove = false;
     }
@@ -47,6 +54,7 @@ public class SpriteChange : MonoBehaviour
             spriteRenderer.sprite = secondSprite;
             canMove = true;
             disableTriggers.deactivateCollider();
+            partSystem.ActivateParticle();
             
         }
     }

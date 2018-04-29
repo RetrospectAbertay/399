@@ -122,7 +122,7 @@ MonoBehaviour:
   secondSprite: {fileID: 21300000, guid: c094f94ddcff0c741af07cbbdeb4bf6e, type: 3}
   tagName: Mobo
   triggerName: Stop1
-  particleName: Particle System
+  partName: Particle System
 --- !u!114 &114557615709574272
 MonoBehaviour:
   m_ObjectHideFlags: 1
